@@ -14,6 +14,8 @@
 		0A5FE1401E4FCF7D00C8CD8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FE13E1E4FCF7D00C8CD8F /* LaunchScreen.storyboard */; };
 		0A5FE14B1E4FCF7D00C8CD8F /* SplatPal_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE14A1E4FCF7D00C8CD8F /* SplatPal_2Tests.swift */; };
 		0A5FE1561E4FCF7D00C8CD8F /* SplatPal_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE1551E4FCF7D00C8CD8F /* SplatPal_2UITests.swift */; };
+		0A5FE1671E4FD1A800C8CD8F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5FE1651E4FD1A800C8CD8F /* Fabric.framework */; };
+		0A5FE1681E4FD1A800C8CD8F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5FE1661E4FD1A800C8CD8F /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		0A5FE1511E4FCF7D00C8CD8F /* SplatPal 2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SplatPal 2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5FE1551E4FCF7D00C8CD8F /* SplatPal_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplatPal_2UITests.swift; sourceTree = "<group>"; };
 		0A5FE1571E4FCF7D00C8CD8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A5FE1651E4FD1A800C8CD8F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		0A5FE1661E4FD1A800C8CD8F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5FE1681E4FD1A800C8CD8F /* Crashlytics.framework in Frameworks */,
+				0A5FE1671E4FD1A800C8CD8F /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,7 @@
 		0A5FE1291E4FCF7C00C8CD8F = {
 			isa = PBXGroup;
 			children = (
+				0A5FE1641E4FD19A00C8CD8F /* Frameworks */,
 				0A5FE1341E4FCF7C00C8CD8F /* SplatPal 2 */,
 				0A5FE1491E4FCF7D00C8CD8F /* SplatPal 2Tests */,
 				0A5FE1541E4FCF7D00C8CD8F /* SplatPal 2UITests */,
@@ -125,6 +132,15 @@
 			path = "SplatPal 2UITests";
 			sourceTree = "<group>";
 		};
+		0A5FE1641E4FD19A00C8CD8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FE1651E4FD1A800C8CD8F /* Fabric.framework */,
+				0A5FE1661E4FD1A800C8CD8F /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +151,7 @@
 				0A5FE12E1E4FCF7C00C8CD8F /* Sources */,
 				0A5FE12F1E4FCF7C00C8CD8F /* Frameworks */,
 				0A5FE1301E4FCF7C00C8CD8F /* Resources */,
+				0A5FE1631E4FD0EC00C8CD8F /* Start Fabric */,
 			);
 			buildRules = (
 			);
@@ -256,6 +273,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A5FE1631E4FD0EC00C8CD8F /* Start Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Start Fabric";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run e9e0fd3a066ecdbf0929f4b7ad16a4dc16d5468b 29c867f398edb79a7f762f24fb3193b235728bdceb51a924c84ba7c78564ee4d";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0A5FE12E1E4FCF7C00C8CD8F /* Sources */ = {
@@ -416,6 +450,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ENK6LV73Q6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "SplatPal 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sideapps.SplatPal-2";
@@ -429,6 +467,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ENK6LV73Q6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "SplatPal 2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sideapps.SplatPal-2";
