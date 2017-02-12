@@ -9,21 +9,29 @@
 import UIKit
 import Fabric
 import Crashlytics
+import SwiftyBeaver
+
+let log = SwiftyBeaver.self
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         configureFabric()
+        configureLogging()
         
         return true
     }
     
     func configureFabric() {
         Fabric.with([Crashlytics.self])
+    }
+    
+    func configureLogging() {
+        let console = ConsoleDestination()
+        log.addDestination(console)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

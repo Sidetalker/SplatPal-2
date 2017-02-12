@@ -14,11 +14,14 @@ class SplatData {
     /// Singleton accessor
     static let shared = SplatData()
     
-    var currentRotation: MapRotation?
+    var currentRotation: Rotation?
     
     private init() {
         
     }
+    
+
+    
     
     
 }

@@ -1,5 +1,5 @@
 //
-//  Mod.swift
+//  Stage.swift
 //  SplatPal 2
 //
 //  Created by Kevin Sullivan on 2/11/17.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-/// Splatoon game mode
-public struct Mode: CustomStringConvertible {
+/// Splatoon stage (or stage)
+public struct Stage: CustomStringConvertible {
     public internal(set) var id: String
     
-    /// Localized name of the mode
+    /// Localized name of the stage
     public internal(set) var name: String
     
-    /// 80x80 px icon for mode
-    public internal(set) var icon: UIImage?
+    /// 580x326 px image of the stage
+    public internal(set) var image: UIImage?
     
     public var description: String {
         return name
     }
     
     public var debugDescription: String {
-        return "[Mode | \(name) | \(id)]"
+        return "[Stage | \(name) | \(id)]"
     }
     
     init(name: String) {
@@ -37,12 +37,12 @@ public struct Mode: CustomStringConvertible {
     }
 }
 
-extension Mode {
+extension Stage {
     class Coding: NSObject, NSCoding {
-        let mode: Mode?
+        let stage: Stage?
         
-        init(mode: Mode) {
-            self.mode = mode
+        init(stage: Stage) {
+            self.stage = stage
             super.init()
         }
         
@@ -54,30 +54,30 @@ extension Mode {
                 return nil
             }
             
-            mode = Mode(id: id, name: name)
+            stage = Stage(id: id, name: name)
             
             super.init()
         }
         
         public func encode(with aCoder: NSCoder) {
-            guard let mode = mode else {
+            guard let stage = stage else {
                 return
             }
             
-            aCoder.encode(mode.id, forKey: "id")
-            aCoder.encode(mode.name, forKey: "name")
+            aCoder.encode(stage.id, forKey: "id")
+            aCoder.encode(stage.name, forKey: "name")
         }
     }
 }
 
-extension Mode: Encodable {
+extension Stage: Encodable {
     var encoded: Decodable? {
-        return Mode.Coding(mode: self)
+        return Stage.Coding(stage: self)
     }
 }
 
-extension Mode.Coding: Decodable {
+extension Stage.Coding: Decodable {
     var decoded: Encodable? {
-        return self.mode
+        return self.stage
     }
 }

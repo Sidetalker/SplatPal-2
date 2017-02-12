@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1067BA1E5008AD005CBD9A /* SplatFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1067B91E5008AD005CBD9A /* SplatFormatter.swift */; };
 		0A5FE1361E4FCF7C00C8CD8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE1351E4FCF7C00C8CD8F /* AppDelegate.swift */; };
 		0A5FE1381E4FCF7C00C8CD8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE1371E4FCF7C00C8CD8F /* ViewController.swift */; };
 		0A5FE13B1E4FCF7D00C8CD8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A5FE1391E4FCF7D00C8CD8F /* Main.storyboard */; };
@@ -22,9 +23,11 @@
 		0A5FE1751E4FE2E200C8CD8F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5FE1731E4FE2E200C8CD8F /* Crashlytics.framework */; };
 		0A5FE1771E4FE43300C8CD8F /* SplatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE1761E4FE43300C8CD8F /* SplatData.swift */; };
 		0A5FE17B1E4FEDE400C8CD8F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE17A1E4FEDE400C8CD8F /* Helpers.swift */; };
-		0A5FE17D1E4FEE9600C8CD8F /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE17C1E4FEE9600C8CD8F /* Map.swift */; };
+		0A5FE17D1E4FEE9600C8CD8F /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE17C1E4FEE9600C8CD8F /* Stage.swift */; };
 		0A5FE17F1E4FEE9C00C8CD8F /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE17E1E4FEE9C00C8CD8F /* Mode.swift */; };
-		0A5FE1811E4FEEAC00C8CD8F /* MapRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE1801E4FEEAC00C8CD8F /* MapRotation.swift */; };
+		0A5FE1811E4FEEAC00C8CD8F /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE1801E4FEEAC00C8CD8F /* Rotation.swift */; };
+		0A5FE1891E4FF72E00C8CD8F /* Splatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE1881E4FF72E00C8CD8F /* Splatter.swift */; };
+		0A5FE18B1E4FF92600C8CD8F /* PMKAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5FE18A1E4FF92600C8CD8F /* PMKAlamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1067B91E5008AD005CBD9A /* SplatFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplatFormatter.swift; sourceTree = "<group>"; };
 		0A5FE1321E4FCF7C00C8CD8F /* SplatPal 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SplatPal 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A5FE1351E4FCF7C00C8CD8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A5FE1371E4FCF7C00C8CD8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,9 +70,11 @@
 		0A5FE1731E4FE2E200C8CD8F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		0A5FE1761E4FE43300C8CD8F /* SplatData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplatData.swift; sourceTree = "<group>"; };
 		0A5FE17A1E4FEDE400C8CD8F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		0A5FE17C1E4FEE9600C8CD8F /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		0A5FE17C1E4FEE9600C8CD8F /* Stage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		0A5FE17E1E4FEE9C00C8CD8F /* Mode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
-		0A5FE1801E4FEEAC00C8CD8F /* MapRotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRotation.swift; sourceTree = "<group>"; };
+		0A5FE1801E4FEEAC00C8CD8F /* Rotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotation.swift; sourceTree = "<group>"; };
+		0A5FE1881E4FF72E00C8CD8F /* Splatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Splatter.swift; sourceTree = "<group>"; };
+		0A5FE18A1E4FF92600C8CD8F /* PMKAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKAlamofire.framework; path = Carthage/Build/iOS/PMKAlamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 				0A5FE16F1E4FDAF200C8CD8F /* SwiftyBeaver.framework in Frameworks */,
 				0A5FE1751E4FE2E200C8CD8F /* Crashlytics.framework in Frameworks */,
 				0A5FE1701E4FDAF200C8CD8F /* SwiftyJSON.framework in Frameworks */,
+				0A5FE18B1E4FF92600C8CD8F /* PMKAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +162,7 @@
 		0A5FE1641E4FD19A00C8CD8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FE18A1E4FF92600C8CD8F /* PMKAlamofire.framework */,
 				0A5FE1721E4FE2E200C8CD8F /* Fabric.framework */,
 				0A5FE1731E4FE2E200C8CD8F /* Crashlytics.framework */,
 				0A5FE1691E4FDAF200C8CD8F /* Alamofire.framework */,
@@ -168,9 +176,9 @@
 		0A5FE1821E4FF39800C8CD8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0A5FE17C1E4FEE9600C8CD8F /* Map.swift */,
+				0A5FE17C1E4FEE9600C8CD8F /* Stage.swift */,
 				0A5FE17E1E4FEE9C00C8CD8F /* Mode.swift */,
-				0A5FE1801E4FEEAC00C8CD8F /* MapRotation.swift */,
+				0A5FE1801E4FEEAC00C8CD8F /* Rotation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -180,6 +188,8 @@
 			children = (
 				0A5FE1351E4FCF7C00C8CD8F /* AppDelegate.swift */,
 				0A5FE1761E4FE43300C8CD8F /* SplatData.swift */,
+				0A5FE1881E4FF72E00C8CD8F /* Splatter.swift */,
+				0A1067B91E5008AD005CBD9A /* SplatFormatter.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -379,6 +389,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/PMKAlamofire.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
@@ -394,11 +405,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5FE1891E4FF72E00C8CD8F /* Splatter.swift in Sources */,
+				0A1067BA1E5008AD005CBD9A /* SplatFormatter.swift in Sources */,
 				0A5FE1771E4FE43300C8CD8F /* SplatData.swift in Sources */,
 				0A5FE1381E4FCF7C00C8CD8F /* ViewController.swift in Sources */,
-				0A5FE1811E4FEEAC00C8CD8F /* MapRotation.swift in Sources */,
+				0A5FE1811E4FEEAC00C8CD8F /* Rotation.swift in Sources */,
 				0A5FE17B1E4FEDE400C8CD8F /* Helpers.swift in Sources */,
-				0A5FE17D1E4FEE9600C8CD8F /* Map.swift in Sources */,
+				0A5FE17D1E4FEE9600C8CD8F /* Stage.swift in Sources */,
 				0A5FE1361E4FCF7C00C8CD8F /* AppDelegate.swift in Sources */,
 				0A5FE17F1E4FEE9C00C8CD8F /* Mode.swift in Sources */,
 			);

@@ -12,14 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+     
+        Splatter.fetchRotations(source: .splatInk).then { maps -> Void in
+            log.debug("Loaded maps")
+            maps.forEach { log.verbose("\($0.debugDescription)") }
+        }.catch { error in
+            log.error("Error loading maps: \(error.localizedDescription)")
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
