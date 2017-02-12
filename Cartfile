@@ -1,0 +1,4 @@
+github "Alamofire/Alamofire"
+github "mxcl/PromiseKit"
+github "SwiftyBeaver/SwiftyBeaver"
+github "SwiftyJSON/SwiftyJSON"
