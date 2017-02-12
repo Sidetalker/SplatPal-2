@@ -242,6 +242,7 @@
 				0A5FE12F1E4FCF7C00C8CD8F /* Frameworks */,
 				0A5FE1301E4FCF7C00C8CD8F /* Resources */,
 				0A5FE1631E4FD0EC00C8CD8F /* Start Fabric */,
+				0A1067BB1E50D2C1005CBD9A /* Update Build Number */,
 			);
 			buildRules = (
 			);
@@ -365,6 +366,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0A1067BB1E50D2C1005CBD9A /* Update Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "versionNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"$INFOPLIST_FILE\")\nbuildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
 		0A5FE1631E4FD0EC00C8CD8F /* Start Fabric */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

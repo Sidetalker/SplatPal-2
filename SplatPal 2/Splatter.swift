@@ -40,7 +40,7 @@ class Splatter {
      - returns: Promise with array of current/upcoming map rotations
     */
     class func fetchRotations(source: SplatterSource = .splatInk) -> Promise<[Rotation]> {
-        log.debug("Fetching maps from \(String(describing: source))")
+        log.debug("Fetching rotations from \(String(describing: source))")
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         return firstly {
@@ -82,6 +82,8 @@ class Splatter {
             
             rotations.append(rotation)
         }
+        
+        log.debug("Finished parsing \(rotations.count) rotation(s)")
         
         return Promise<[Rotation]>(value: rotations)
     }
